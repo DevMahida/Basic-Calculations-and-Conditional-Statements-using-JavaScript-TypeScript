@@ -203,3 +203,73 @@ else {
     document.getElementById("q17-ans").innerText = q17_v1 + " is not divisible by 5 and 11 both.";
 }
 
+// calculator
+let chosen_case = 2;
+let q18_v1 = 3;
+let q18_v2 = 5;
+
+document.getElementById("q18").innerText = "Q18. Develop a simple calculator using switch statement to perform addition, subtraction, multiplication, and division.";
+document.getElementById("case").innerHTML = "Cases : <br> <span class = 'ms-5'>1 for Addition</span> <br> <span class = 'ms-5'>2 for Subtraction</span> <br> <span class = 'ms-5'>3 for Multiplication</span> <br> <span class = 'ms-5'>4 for Division</span>";
+document.getElementById("chosen-case").innerText = "Chosen Case : " + chosen_case;
+document.getElementById("q18-value").innerText = "Values : " + q2_v1 + " & " + q2_v2;
+
+switch (chosen_case) {
+    case 1:
+        document.getElementById("q18-ans").innerText = "Addition is : " + (q18_v1 + q18_v2);
+        break;
+    case 2:
+        document.getElementById("q18-ans").innerText = "Subtraction is : " + (q18_v1 - q18_v2);
+        break;
+    case 3:
+        document.getElementById("q18-ans").innerText = "Multiplication is : " + (q18_v1 * q18_v2);
+        break;
+    case 4:
+        document.getElementById("q18-ans").innerText = "Division is : " + (q18_v1 / q18_v2);
+        break;
+    default:
+        document.getElementById("q18-ans").innerText = "Invalid Case";
+        break;
+}
+
+// BMI
+
+let q19_v1 = 80;//weight in kg
+let q19_v2 = 1.8;//height in meter
+let BMI = q19_v1 / (q19_v2 * q19_v2);
+
+document.getElementById("q19").innerText = "Q19. Write a program to calculate BMI and display the health category (Underweight, Normal, Overweight, Obese).";
+document.getElementById("q19-value").innerText = "Weight : " + q19_v1 + " kg | Height : " + q19_v2 + " meter";
+document.getElementById("q19-ans").innerText = "BMI : " + BMI;
+document.getElementById("health-category").innerText = "";
+if (BMI < 18.5) {
+    document.getElementById("health-category").innerText = "Underweight";
+}
+else if (BMI >= 18.5 && BMI <= 24.9) {
+    document.getElementById("health-category").innerText = "Normal Weight";
+}
+else if (BMI >= 25.0 && BMI <= 29.9) {
+    document.getElementById("health-category").innerText = "Overweight";
+}
+else {
+    document.getElementById("health-category").innerText = "Obesity";
+}
+
+// electric bill
+let q20_v1 = 125; // unit consumed
+let sum = 0;
+
+document.getElementById("q20").innerText = "Q20. Create a program to calculate electricity bill based on units consumed : First 100 units → ₹5 per unit | Next 100 units → ₹7 per unit | Above 200 units → ₹10 per unit ";
+document.getElementById("q20-value").innerText = "Unit consumed : " + q20_v1;
+
+if (q20_v1 <= 100) {
+    sum = q20_v1 * 5;
+    document.getElementById("q20-ans").innerText = "Electricity Bill : ₹" + sum;
+}
+else if (q20_v1 > 100 && q20_v1 < 200) {
+    sum = (100 * 5) + ((q20_v1 - 100) * 7);
+    document.getElementById("q20-ans").innerText = "Electricity Bill : ₹" + sum;
+}
+else {
+    sum = (100 * 5) + (100 * 7) + ((q20_v1 - 200) * 10);
+    document.getElementById("q20-ans").innerText = "Electricity Bill : ₹" + sum;
+}
