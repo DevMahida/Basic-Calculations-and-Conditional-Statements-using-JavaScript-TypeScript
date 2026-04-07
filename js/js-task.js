@@ -87,7 +87,6 @@ if (q10_v1 % 2 == 0) {
 }
 else {
     document.getElementById("q10-ans").innerText = "Number is Odd.";
-
 }
 
 // positive negative zero
@@ -122,7 +121,7 @@ else {
     document.getElementById("q12-ans").innerText = q12_v2 + " is Greater.";
 }
 
-// max of 2 number
+// max of 3 number
 
 let q13_v1 = 6;
 let q13_v2 = 5;
@@ -240,7 +239,6 @@ let BMI = q19_v1 / (q19_v2 * q19_v2);
 document.getElementById("q19").innerText = "Q19. Write a program to calculate BMI and display the health category (Underweight, Normal, Overweight, Obese).";
 document.getElementById("q19-value").innerText = "Weight : " + q19_v1 + " kg | Height : " + q19_v2 + " meter";
 document.getElementById("q19-ans").innerText = "BMI : " + BMI;
-document.getElementById("health-category").innerText = "";
 if (BMI < 18.5) {
     document.getElementById("health-category").innerText = "Underweight";
 }
